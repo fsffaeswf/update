@@ -1,0 +1,15 @@
+void Player::update() {
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
+		speedx -= 0.1;
+		if (speedx <= -2.f)speedx = -2.f;
+	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+		speedx += 0.1;
+		if (speedx >= 2.f)speedx = 2.f;
+	}
+
+
+
+	sprite.move(speedx, speedy);
+	
+}
